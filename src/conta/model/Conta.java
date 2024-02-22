@@ -1,5 +1,6 @@
 package conta.model;
 
+
 public class Conta {
 
 	private int numero;
@@ -65,17 +66,18 @@ public class Conta {
 		}
 		this.setSaldo(this.getSaldo() - valor);
 		return true;
-		
 
 	}
+
 	public void depositar(float valor) {
 		this.setSaldo(this.getSaldo() + valor);
-		
-}
+
+	}
+
 	public void visualizar() {
-		
-		String tipo = "";
-		
+
+		String tipo = " ";
+
 		switch (this.tipo) {
 		case 1:
 			tipo = "Conta Corrente";
@@ -84,5 +86,6 @@ public class Conta {
 			tipo = "Conta Poupança";
 			break;
 		}
+		 System.out.println("Tipo de conta: " + tipo);
 	}
 }
