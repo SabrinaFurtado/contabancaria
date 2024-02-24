@@ -1,6 +1,5 @@
 package conta.model;
 
-
 public abstract class Conta {
 
 	private int numero;
@@ -17,6 +16,7 @@ public abstract class Conta {
 		this.titular = titular;
 		this.saldo = saldo;
 	}
+	
 
 	public int getNumero() {
 		return numero;
@@ -76,6 +76,7 @@ public abstract class Conta {
 
 	public void visualizar() {
 
+		@SuppressWarnings("unused")
 		String tipo = " ";
 
 		switch (this.tipo) {
@@ -86,6 +87,12 @@ public abstract class Conta {
 			tipo = "Conta Poupança";
 			break;
 		}
-		 System.out.println("Tipo de conta: " + tipo);
+		System.out.println("**********DADOS DA CONTA: *************");
+		System.out.println("Número de conta: " + this.getNumero());
+		System.out.println("Agêcia: " + this.agencia);
+		System.out.println("Tipo de conta: " + this.tipo);
+		System.out.println("Titular: " + this.titular);
+		System.out.println("Saldo: " + this.saldo);
+		System.out.println("****************************************");
 	}
 }
